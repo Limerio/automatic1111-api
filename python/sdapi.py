@@ -9,7 +9,7 @@ def post_res(url, path, payload):
     res = requests.post(url=f'{url}/sdapi/v1/{path}', payload=payload)
     return res.json()
 
-class StableDiffusion:
+class SDAPI:
   def __init__(self, url):
     self.url = url
 
