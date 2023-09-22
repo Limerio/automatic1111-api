@@ -13,20 +13,20 @@ class ControlNet:
   def __init__(self, url):
     self.url = url
 
-  def get_version(self):
+  def version(self):
     return get_res(self.url, 'version')
 
-  def get_model_list(self):
+  def model_list(self):
     return get_res(self.url, 'model_list')
 
-  def get_module_list(self):
+  def module_list(self):
     return get_res(self.url, 'module_list')
 
-  def get_control_types(self):
+  def control_types(self):
     return get_res(self.url, 'control_types')
   
-  def get_settings(self):
+  def settings(self):
     return get_res(self.url, 'settings')
 
-  def post_detect(self, payload):
+  def detect(self, payload):
     return post_res(self.url, 'detect', payload)
