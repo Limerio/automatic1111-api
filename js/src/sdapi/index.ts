@@ -21,7 +21,7 @@ import type {
   LorasResponse,
   MemoryResponse,
   OptionsPayload,
-  PayloadResponse,
+  OptionsResponse,
   PngInfoPayload,
   PngInfoResponse,
   PreprocessPayload,
@@ -124,12 +124,12 @@ export class SDApi {
     return await this.api.request<SkipResponse, undefined>('POST', 'skip');
   }
 
-  async Payload(): Promise<PayloadResponse> {
-    return await this.api.request<PayloadResponse, undefined>('GET', 'Payload');
+  async Payload(): Promise<OptionsResponse> {
+    return await this.api.request<OptionsResponse, undefined>('GET', 'Payload');
   }
 
-  async setPayload(payload: OptionsPayload): Promise<PayloadResponse> {
-    return await this.api.request<PayloadResponse, OptionsPayload>(
+  async setPayload(payload: OptionsPayload): Promise<OptionsResponse> {
+    return await this.api.request<OptionsResponse, OptionsPayload>(
       'POST',
       'Payload',
       payload,
