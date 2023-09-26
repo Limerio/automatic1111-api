@@ -9,108 +9,213 @@ describe('SDApi Test', () => {
   })
 
   it('Text To Img', async () => {
-    expect(await sdapi.txt2Img()).toBe()
+    const txt2ImgResult = await sdapi.txt2img()
+
+    expect(txt2ImgResult.status).toBe(200)
+    expect(txt2ImgResult.data).toBe()
   })
   it('Img To Img', async () => {
-    expect(await sdapi.img2Img()).toBe()
+    const img2imgResult = await sdapi.img2img()
+
+    expect(img2imgResult.status).toBe(200)
+    expect(img2imgResult.data).toBe()
   })
   it('Extra Single Image', async () => {
-    expect(await sdapi.extraSingleImage()).toBe()
+    const extraSingleImageResult = await sdapi.extraSingleImage()
+
+    expect(extraSingleImageResult.status).toBe(200)
+    expect(extraSingleImageResult.data).toBe()
   })
   it('Extra Batch Images', async () => {
-    expect(await sdapi.extraBatchImages()).toBe()
+    const extraBatchImagesResult = await sdapi.extraBatchImages()
+
+    expect(extraBatchImagesResult.status).toBe(200)
+    expect(extraBatchImagesResult.data).toBe()
   })
   it('Png Info', async () => {
-    expect(await sdapi.pngInfo()).toBe()
+    const pngInfoResult = await sdapi.pngInfo()
+
+    expect(pngInfoResult.status).toBe(200)
+    expect(pngInfoResult.data).toBe()
   })
   it('Progress', async () => {
-    expect(await sdapi.progress()).toBe()
+    const progressResult = await sdapi.progress()
+
+    expect(progressResult.status).toBe(200)
+    expect(progressResult.data).toBe()
   })
   it('Interrogate', async () => {
-    expect(await sdapi.interrogate()).toBe()
+    const interrogateResult = await sdapi.interrogate()
+
+    expect(interrogateResult.status).toBe(200)
+    expect(interrogateResult.data).toBe()
   })
   it('Interrupt', async () => {
-    expect(await sdapi.interrupt()).toBe()
+    const interruptResult = await sdapi.interrupt()
+
+    expect(interruptResult.status).toBe(200)
+    expect(interruptResult.data).toBe()
   })
   it('Skip', async () => {
-    expect(await sdapi.skip()).toBe()
+    const skipResult = await sdapi.skip()
+
+    expect(skipResult.status).toBe(200)
+    expect(skipResult.data).toBe()
   })
   it('Options', async () => {
-    expect(await sdapi.options()).toBe()
+    const optionsResult = await sdapi.options()
+
+    expect(optionsResult.status).toBe(200)
+    expect(optionsResult.data).toBe()
   })
   it('Set Options', async () => {
-    expect(await sdapi.setOptions()).toBe()
+    const setOptionsResult = await sdapi.setOptions()
+
+    expect(setOptionsResult.status).toBe(200)
+    expect(setOptionsResult.data).toBe()
   })
   it('Cmd Flags', async () => {
-    expect(await sdapi.cmdFlags()).toBe()
+    const cmdFlagsResult = await sdapi.cmdFlags()
+
+    expect(cmdFlagsResult.status).toBe(200)
+    expect(cmdFlagsResult.data).toBe()
   })
   it('Samplers', async () => {
-    expect(await sdapi.samplers()).toBe()
+    const samplersResult = await sdapi.samplers()
+
+    expect(samplersResult.status).toBe(200)
+    expect(samplersResult.data).toBe()
   })
   it('UpScalers', async () => {
-    expect(await sdapi.upscalers()).toBe()
+    const upscalersResult = await sdapi.upscalers()
+
+    expect(upscalersResult.status).toBe(200)
+    expect(upscalersResult.data).toBe()
   })
   it('Latent Upscale Modes', async () => {
-    expect(await sdapi.latentUpscaleModes()).toBe()
+    const latentUpscaleModesResult = await sdapi.latentUpscaleModes()
+
+    expect(latentUpscaleModesResult.status).toBe(200)
+    expect(latentUpscaleModesResult.data).toBe()
   })
   it('SD Models', async () => {
-    expect(await sdapi.sdModels()).toBe()
+    const sdModelsResult = await sdapi.sdModels()
+
+    expect(sdModelsResult.status).toBe(200)
+    expect(sdModelsResult.data).toBe()
   })
   it('SD Vae', async () => {
-    expect(await sdapi.sdVae()).toBe()
+    const sdVaeResult = await sdapi.sdVae()
+
+    expect(sdVaeResult.status).toBe(200)
+    expect(sdVaeResult.data).toBe()
   })
   it('Hypernetworks', async () => {
-    expect(await sdapi.hypernetworks()).toBe()
+    const hypernetworksResult = await sdapi.hypernetworks()
+
+    expect(hypernetworksResult.status).toBe(200)
+    expect(hypernetworksResult.data).toBe()
   })
   it('Face Restorers', async () => {
-    expect(await sdapi.faceRestorers()).toBe()
+    const faceRestorersResult = await sdapi.faceRestorers()
+
+    expect(faceRestorersResult.status).toBe(200)
+    expect(faceRestorersResult.data).toBe()
   })
   it('Realesrgan Models', async () => {
-    expect(await sdapi.realesrganModels()).toBe()
+    const realesrganModelsResult = await sdapi.realesrganModels()
+
+    expect(realesrganModelsResult.status).toBe(200)
+    expect(realesrganModelsResult.data).toBe()
   })
   it('Prompt Styles', async () => {
-    expect(await sdapi.promptStyles()).toBe()
+    const promptStylesResult = await sdapi.promptStyles()
+
+    expect(promptStylesResult.status).toBe(200)
+    expect(promptStylesResult.data).toBe()
   })
   it('Embeddings', async () => {
-    expect(await sdapi.embeddings()).toBe()
+    const embeddingsResult = await sdapi.embeddings()
+
+    expect(embeddingsResult.status).toBe(200)
+    expect(embeddingsResult.data).toBe()
   })
   it('Refresh Checkpoints', async () => {
-    expect(await sdapi.refreshCheckpoints()).toBe()
+    const refreshCheckpointsResult = await sdapi.refreshCheckpoints()
+
+    expect(refreshCheckpointsResult.status).toBe(200)
+    expect(refreshCheckpointsResult.data).toBe()
   })
   it('Refresh Vae', async () => {
-    expect(await sdapi.refreshVae()).toBe()
+    const refreshVaeResult = await sdapi.refreshVae()
+
+    expect(refreshVaeResult.status).toBe(200)
+    expect(refreshVaeResult.data).toBe()
   })
   it('Create Embedding', async () => {
-    expect(await sdapi.createEmbedding()).toBe()
+    const createEmbeddingResult = await sdapi.createEmbedding()
+
+    expect(createEmbeddingResult.status).toBe(200)
+    expect(createEmbeddingResult.data).toBe()
   })
   it('Create Hypernetwork', async () => {
-    expect(await sdapi.createHypernetwork()).toBe()
+    const createHypernetworkResult = await sdapi.createHypernetwork()
+
+    expect(createHypernetworkResult.status).toBe(200)
+    expect(createHypernetworkResult.data).toBe()
   })
   it('Preprocess', async () => {
-    expect(await sdapi.preprocess()).toBe()
+    const preprocessResult = await sdapi.preprocess()
+
+    expect(preprocessResult.status).toBe(200)
+    expect(preprocessResult.data).toBe()
   })
   it('Train Embedding', async () => {
-    expect(await sdapi.trainEmbedding()).toBe()
+    const trainEmbeddingResult = await sdapi.trainEmbedding()
+
+    expect(trainEmbeddingResult.status).toBe(200)
+    expect(trainEmbeddingResult.data).toBe()
   })
   it('Train Hypernetwork', async () => {
-    expect(await sdapi.trainHypernetwork()).toBe()
+    const trainHypernetworkResult = await sdapi.trainHypernetwork()
+
+    expect(trainHypernetworkResult.status).toBe(200)
+    expect(trainHypernetworkResult.data).toBe()
   })
   it('Memory', async () => {
-    expect(await sdapi.memory()).toBe()
+    const memoryResult = await sdapi.memory()
+
+    expect(memoryResult.status).toBe(200)
+    expect(memoryResult.data).toBe()
   })
   it('Unload Checkpoint', async () => {
-    expect(await sdapi.unloadCheckpoint()).toBe()
+    const unloadCheckpointResult = await sdapi.unloadCheckpoint()
+
+    expect(unloadCheckpointResult.status).toBe(200)
+    expect(unloadCheckpointResult.data).toBe()
   })
   it('Scripts', async () => {
-    expect(await sdapi.scripts()).toBe()
+    const scriptsResult = await sdapi.scripts()
+
+    expect(scriptsResult.status).toBe(200)
+    expect(scriptsResult.data).toBe()
   })
   it('Script Info', async () => {
-    expect(await sdapi.scriptInfo()).toBe()
+    const scriptInfoResult = await sdapi.scriptInfo()
+
+    expect(scriptInfoResult.status).toBe(200)
+    expect(scriptInfoResult.data).toBe()
   })
   it('Loras', async () => {
-    expect(await sdapi.loras()).toBe()
+    const lorasResult = await sdapi.loras()
+
+    expect(lorasResult.status).toBe(200)
+    expect(lorasResult.data).toBe()
   })
   it('Refresh Loras', async () => {
-    expect(await sdapi.refreshLoras()).toBe()
+    const refreshLorasResult = await sdapi.refreshLoras()
+
+    expect(refreshLorasResult.status).toBe(200)
+    expect(refreshLorasResult.data).toBe()
   })
 })

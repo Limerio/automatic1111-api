@@ -9,21 +9,39 @@ describe('ControlNet Test', () => {
   })
 
   it('Version', async () => {
-    expect(await controlNet.version()).toBe()
+    const versionResult = await controlNet.version()
+
+    expect(versionResult.status).toBe(200)
+    expect(versionResult.data).toBe()
   })
   it('Model List', async () => {
-    expect(await controlNet.modelList()).toBe()
+    const modelListResult = await controlNet.modelList()
+
+    expect(modelListResult.status).toBe(200)
+    expect(modelListResult.data).toBe()
   })
   it('Module List', async () => {
-    expect(await controlNet.moduleList()).toBe()
+    const moduleListResult = await controlNet.moduleList()
+
+    expect(moduleListResult.status).toBe(200)
+    expect(moduleListResult.data).toBe()
   })
   it('Control Types', async () => {
-    expect(await controlNet.controlTypes()).toBe()
+    const controlTypesResult = await controlNet.controlTypes()
+
+    expect(controlTypesResult.status).toBe(200)
+    expect(controlTypesResult.data).toBe()
   })
   it('Settings', async () => {
-    expect(await controlNet.settings()).toBe()
+    const settingsResult = await controlNet.settings()
+
+    expect(settingsResult.status).toBe(200)
+    expect(settingsResult.data).toBe()
   })
   it('Detect', async () => {
-    expect(await controlNet.detect()).toBe()
+    const detectResult = await controlNet.detect()
+
+    expect(detectResult.status).toBe(200)
+    expect(detectResult.data).toBe()
   })
 })

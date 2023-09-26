@@ -56,7 +56,7 @@ export class SDApi {
     this.api = api(url, 'sdapi/v1')
   }
 
-  async txt2Img(payload: Txt2ImgPayload): Promise<Response<Txt2ImgResponse>> {
+  async txt2img(payload: Txt2ImgPayload): Promise<Response<Txt2ImgResponse>> {
     return await this.api.request<Txt2ImgResponse, Txt2ImgPayload>(
       'POST',
       'txt2img',
@@ -64,7 +64,7 @@ export class SDApi {
     )
   }
 
-  async img2Img(payload: Img2ImgPayload): Promise<Response<Img2ImgResponse>> {
+  async img2img(payload: Img2ImgPayload): Promise<Response<Img2ImgResponse>> {
     return await this.api.request<Img2ImgResponse, Img2ImgPayload>(
       'POST',
       'img2img',
@@ -107,7 +107,7 @@ export class SDApi {
 
   async interrogate(
     payload: InterrogatePayload,
-  ): Promise<Promise<InterrogateResponse>> {
+  ): Promise<Promise<Response<InterrogateResponse>>> {
     return await this.api.request<InterrogateResponse, InterrogatePayload>(
       'POST',
       'interrogate',
