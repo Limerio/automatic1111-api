@@ -1,16 +1,18 @@
-type RequestMethods = 'GET' | 'POST';
+import { Response } from './types.ts'
+
+type RequestMethods = 'GET' | 'POST'
 
 type Data = {
-  method: RequestMethods;
-  body?: string;
-};
+  method: RequestMethods
+  body?: string
+}
 
 export interface Api {
   request: <D, P>(
     method: RequestMethods,
     path: string,
     payload?: P,
-  ) => Promise<D>;
+  ) => Promise<Response<D>>
 }
 
 export const api = (url: string, base: string) => {
@@ -18,26 +20,26 @@ export const api = (url: string, base: string) => {
     method: RequestMethods,
     path: string,
     payload?: P,
-  ): Promise<D> => {
-    let data: Data;
+  ): Promise<Response<D>> => {
+    let data: Data
 
     switch (method) {
       case 'GET':
         data = {
           method,
           body: JSON.stringify(payload),
-        };
-        break;
+        }
+        break
 
       case 'POST':
         data = {
           method,
-        };
-        break;
+        }
+        break
     }
-    const res = await fetch(`${url}/${base}/${path}`, data);
+    const res = await fetch(`${url}/${base}/${path}`, data)
 
-    return await res.json();
-  };
-  return { request };
-};
+    return { status: res.status, data: await res.json() }
+  }
+  return { request }
+}
